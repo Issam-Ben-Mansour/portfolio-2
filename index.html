@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Ceevee - Free Responsive HTML5/CSS3 Template</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+ <style>
+    img {
+border-radius: 100%;
+width: 200px;
+}
+h1{
+   font-family: cursive !important;
+}
+h3{
+   color: black !important;
+}
+ </style>
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+	         <li><a class="smoothscroll" href="#resume">Activity</a></li>
+            <li><a class="smoothscroll" href="#portfolio">Successes</a></li>
+            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">I'm Wassimos</h1>
+            <img src="data:image/png;base64,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">
+            <h3><b> I am Content creator YouTube ,<br> I am Professional streamer for @nonolive.arabia ,<br>I am Business manager:@bassem_sayadi
+
+
+             <br>   Let's <a class="smoothscroll" href="#about">start scrolling</a>
+            and learn more <a class="smoothscroll" href="#about">about me</a></b>.</h3>
+            <hr />
+            <ul class="social">
+               <li><a href="https://www.facebook.com/dictatorsyt/"><i class="fa fa-facebook"></i></a></li>
+               <li><a href=""><i class="fa fa-twitter"></i></a></li>
+               <li><a href="https://www.youtube.com/c/wassimos/?fbclid=IwAR3imBsmom0wIxgXx04iQcghSpBWlQPeaWkhvzai_YdIcbprJ64g1fJg8hM"><i class="fa fa-youtube"></i></a></li>
+               <li><a href="https://www.instagram.com/wassimostv/?fbclid=IwAR0BwhSVycT5yojvCjcZ-mACYZWTC1rkhp5hGTefdz7pCR0CV0LjakjcvYI"><i class="fa fa-instagram"></i></a></li>
+              
+               <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+         </div>
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header> <!-- Header End -->
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+      <div class="row">
+
+         <div class="three columns">
+
+            <img class="profile-pic"  src="images/profilepic.jpg" alt="" />
+
+         </div>
+
+         <div class="nine columns main-col">
+
+            <h2>About Me</h2>
+
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+            </p>
+
+            <div class="row">
+
+               <div class="columns contact-details">
+
+                  <h2>Contact Details</h2>
+                  <p class="address">
+						   <span>Jonathan Doe</span><br>
+						   <span>1600 Amphitheatre Parkway<br>
+						         Mountain View, CA 94043 US
+                     </span><br>
+						   <span>(123)456-7890</span><br>
+                     <span>anyone@website.com</span>
+					   </p>
+
+               </div>
+
+               <div class="columns download">
+                  <p>
+                     <a href="#" class="button"><i class="fa fa-download"></i>Download Resume</a>
+                  </p>
+               </div>
+
+            </div> <!-- end row -->
+
+         </div> <!-- end .main-col -->
+
+      </div>
+
+   </section> <!-- About Section End-->
+
+
+   <!-- Resume Section
+   ================================================== -->
+   <section id="resume">
+
+      <!-- Education
+      ----------------------------------------------- -->
+      <div class="row education">
+
+         <div class="three columns header-col">
+            <h1><span>Education</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>University of Life</h3>
+                  <p class="info">Master in Graphic Design <span>&bull;</span> <em class="date">April 2007</em></p>
+
+                  <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                  ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>School of Cool Designers</h3>
+                  <p class="info">B.A. Degree in Graphic Design <span>&bull;</span> <em class="date">March 2003</em></p>
+
+                  <p>
+                  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
+                  ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Education -->
+
+
+      <!-- Work
+      ----------------------------------------------- -->
+      <div class="row work">
+
+         <div class="three columns header-col">
+            <h1><span>Work</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Awesome Design Studio</h3>
+                  <p class="info">Senior UX Designer <span>&bull;</span> <em class="date">March 2010 - Present</em></p>
+
+                  <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                  ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Super Cool Studio</h3>
+                  <p class="info">UX Designer <span>&bull;</span> <em class="date">March 2007 - February 2010</em></p>
+
+                  <p>
+                  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
+                  ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Work -->
+
+
+      <!-- Skills
+      ----------------------------------------------- -->
+      <div class="row skill">
+
+         <div class="three columns header-col">
+            <h1><span>Skills</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt.
+            </p>
+
+				<div class="bars">
+
+				   <ul class="skills">
+					   <li><span class="bar-expand photoshop"></span><em>Photoshop</em></li>
+                  <li><span class="bar-expand illustrator"></span><em>Illustrator</em></li>
+						<li><span class="bar-expand wordpress"></span><em>Wordpress</em></li>
+						<li><span class="bar-expand css"></span><em>CSS</em></li>
+						<li><span class="bar-expand html5"></span><em>HTML5</em></li>
+                  <li><span class="bar-expand jquery"></span><em>jQuery</em></li>
+					</ul>
+
+				</div><!-- end skill-bars -->
+
+			</div> <!-- main-col end -->
+
+      </div> <!-- End skills -->
+
+   </section> <!-- Resume Section End-->
+
+
+   <!-- Portfolio Section
+   ================================================== -->
+   <section id="portfolio">
+
+      <div class="row">
+
+         <div class="twelve columns collapsed">
+
+            <h1>Check Out Some of My Works.</h1>
+
+            <!-- portfolio-wrapper -->
+            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+
+          	   <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-01" title="">
+                        <img alt="" src="images/portfolio/coffee.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Coffee</h5>
+                              <p>Illustrration</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-02" title="">
+                        <img alt="" src="images/portfolio/console.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Console</h5>
+                              <p>Web Development</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-03" title="">
+                        <img alt="" src="images/portfolio/judah.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Judah</h5>
+                              <p>Webdesign</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-04" title="">
+                        <img alt="" src="images/portfolio/into-the-light.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Into The Light</h5>
+                              <p>Photography</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-05" title="">
+                        <img alt="" src="images/portfolio/farmerboy.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Farmer Boy</h5>
+                              <p>Branding</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-06" title="">
+                        <img alt="" src="images/portfolio/girl.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Girl</h5>
+                              <p>Photography</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-07" title="">
+                        <img alt="" src="images/portfolio/origami.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Origami</h5>
+                              <p>Illustrration</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-08" title="">
+                        <img alt="" src="images/portfolio/retrocam.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Retrocam</h5>
+                              <p>Web Development</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div>  <!-- item end -->
+
+            </div> <!-- portfolio-wrapper end -->
+
+         </div> <!-- twelve columns end -->
+
+
+         <!-- Modal Popup
+	      --------------------------------------------------------------- -->
+
+         <div id="modal-01" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Coffee Cup</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-01 End -->
+
+         <div id="modal-02" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-console.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Console</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Web Development</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-02 End -->
+
+         <div id="modal-03" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-judah.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Judah</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-03 End -->
+
+         <div id="modal-04" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-intothelight.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Into the Light</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-04 End -->
+
+         <div id="modal-05" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-farmerboy.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Farmer Boy</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-05 End -->
+
+         <div id="modal-06" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-girl.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Girl</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-06 End -->
+
+         <div id="modal-07" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-origami.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Origami</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Illustration</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-07 End -->
+
+         <div id="modal-08" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-retrocam.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Retrocam</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Webdesign, Photography</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-01 End -->
+
+
+      </div> <!-- row End -->
+
+   </section> <!-- Portfolio Section End-->
+
+
+   <!-- Call-To-Action Section
+   ================================================== -->
+   <section id="call-to-action">
+
+      <div class="row">
+
+         <div class="two columns header-col">
+
+            <h1><span>Get Hosting.</span></h1>
+
+         </div>
+
+         <div class="seven columns">
+
+            <h2><a rel="nofollow" href="http://www.a2hosting.com/?utm___source=styleshoutdemo&utm_medium=__cpm&utm_content=&utm_campaign=">Host This Template on A2 Hosting.</a></h2>
+            <p>300% Faster Hosting on Their SwiftServer SSDs.</p>
+
+         </div>
+
+         <div class="three columns action">
+
+            <a rel="nofollow" href="http://www.a2hosting.com/?utm___source=styleshoutdemo&utm_medium=__cpm&utm_content=&utm_campaign=" class="button">Sign Up Now</a>
+
+         </div>
+
+      </div>
+
+   </section> <!-- Call-To-Action Section End-->
+
+
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+      <div class="text-container">
+
+         <div class="row">
+
+            <div class="two columns header-col">
+
+               <h1><span>Client Testimonials</span></h1>
+
+            </div>
+
+            <div class="ten columns flex-container">
+
+               <div class="flexslider">
+
+                  <ul class="slides">
+
+                     <li>
+                        <blockquote>
+                           <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is
+                           to do what you believe is great work. And the only way to do great work is to love what you do.
+                           If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
+                           </p>
+                           <cite>Steve Jobs</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                     <li>
+                        <blockquote>
+                           <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                           Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                           nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                           </p>
+                           <cite>Mr. Adobe</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                  </ul>
+
+               </div> <!-- div.flexslider ends -->
+
+            </div> <!-- div.flex-container ends -->
+
+         </div> <!-- row ends -->
+
+       </div>  <!-- text-container ends -->
+
+   </section> <!-- Testimonials Section End-->
+
+
+   <!-- Contact Section
+   ================================================== -->
+   <section id="contact">
+
+         <div class="row section-head">
+
+            <div class="two columns header-col">
+
+               <h1><span>Get In Touch.</span></h1>
+
+            </div>
+
+            <div class="ten columns">
+
+                  <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                  eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                  voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                  </p>
+
+            </div>
+
+         </div>
+
+         <div class="row">
+
+            <div class="eight columns">
+
+               <!-- form -->
+               <form action="" method="post" id="contactForm" name="contactForm">
+					<fieldset>
+
+                  <div>
+						   <label for="contactName">Name <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactName" name="contactName">
+                  </div>
+
+                  <div>
+						   <label for="contactEmail">Email <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+                  </div>
+
+                  <div>
+						   <label for="contactSubject">Subject</label>
+						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+                  </div>
+
+                  <div>
+                     <label for="contactMessage">Message <span class="required">*</span></label>
+                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                  </div>
+
+                  <div>
+                     <button class="submit">Submit</button>
+                     <span id="image-loader">
+                        <img alt="" src="images/loader.gif">
+                     </span>
+                  </div>
+
+					</fieldset>
+				   </form> <!-- Form End -->
+
+               <!-- contact-warning -->
+               <div id="message-warning"> Error boy</div>
+               <!-- contact-success -->
+				   <div id="message-success">
+                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+				   </div>
+
+            </div>
+
+
+            <aside class="four columns footer-widgets">
+
+               <div class="widget widget_contact">
+
+					   <h4>Address and Phone</h4>
+					   <p class="address">
+						   Jonathan Doe<br>
+						   1600 Amphitheatre Parkway <br>
+						   Mountain View, CA 94043 US<br>
+						   <span>(123) 456-7890</span>
+					   </p>
+
+				   </div>
+
+               <div class="widget widget_tweets">
+
+                  <h4 class="widget-title">Latest Tweets</h4>
+
+                  <ul id="twitter">
+                     <li>
+                        <span>
+                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
+                        <a href="#">http://t.co/CGIrdxIlI3</a>
+                        </span>
+                        <b><a href="#">2 Days Ago</a></b>
+                     </li>
+                     <li>
+                        <span>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                        eaque ipsa quae ab illo inventore veritatis et quasi
+                        <a href="#">http://t.co/CGIrdxIlI3</a>
+                        </span>
+                        <b><a href="#">3 Days Ago</a></b>
+                     </li>
+                  </ul>
+
+		         </div>
+
+            </aside>
+
+      </div>
+
+   </section> <!-- Contact Section End-->
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+               <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+
+            <ul class="copyright">
+               <li>&copy; 2014 CeeVee</li>
+               <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
+               <li>Sponsored by <a rel="nofollow" href="http://www.a2hosting.com/?utm___source=styleshoutdemo&utm_medium=__cpm&utm_content=&utm_campaign=">A2Hosting</a></li>
+            </ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+
+</body>
+
+</html>
