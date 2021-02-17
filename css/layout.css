@@ -21,7 +21,10 @@
 /* ------------------------------------------------------------------ */
 /* a. General Styles
 /* ------------------------------------------------------------------ */
-
+@font-face {
+   font-family: "Agustina";
+   src: url(../fonts/Agustina.woff);
+ }
 body { background: #0f0f0f; }
 
 /* ------------------------------------------------------------------ */
@@ -33,7 +36,8 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #161415 url("https://wonderfulengineering.com/wp-content/uploads/2016/02/red-wallpaper-9.jpg")no-repeat top center;
+
+   background: #161415 url("https://cdn.wallpapersafari.com/50/78/QBw6ZX.jpg?fbclid=IwAR3gRiDT4QFNhrYN5j0h8Dbmy26rk7HJa2-v2gmDWJd-GEHr5-JC0jSgg4o")no-repeat top center ;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
